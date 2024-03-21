@@ -393,7 +393,7 @@ MonoBehaviour:
   - {fileID: 503263186}
   - {fileID: 1524702306}
   cubeMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  pureColorMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  pureColorMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1279741541
 GameObject:
   m_ObjectHideFlags: 0
