@@ -6,6 +6,8 @@ public class CameraScript : MonoBehaviour
     public Transform[]cubeTransforms;
     public Mesh cubeMesh;
     public Material pureColorMaterial;
+    
+    public SkyboxDraw skyDraw;
 
     private void Start()
     {
@@ -20,12 +22,17 @@ public class CameraScript : MonoBehaviour
         
         
         //------- Start Drawcall
-        pureColorMaterial.color = Color.blue;
+       
+        pureColorMaterial.color = Color.green;
         pureColorMaterial.SetPass(0);
         foreach(var i in cubeTransforms)
+        {
             Graphics.DrawMeshNow(cubeMesh, i.localToWorldMatrix);
+        }
+        skyDraw.DrawSkybox(cam); // renderQueue注意下，保证天空盒后渲染
         //------- End DrawCall
         Graphics.Blit(rt, cam.targetTexture);
 
     }
+
 }
